@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-heading"><h2>--- TO DO LIST ---</h2></div>
+    <br><br>
+    <div class="filters">
+        <span id="all" class="active">All Tasks</span>
+        <span id="upcoming">Up Coming</span>
+        <span id="completed">Completed</span>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="left">
+            <form action="" id="myForm" onkeydown="return event.key != 'Enter';">
+                <div class="left-ele">
+                    <div class="task-title">
+                        <label for="title" class="bold">Title :</label>
+                        <input name="title" id="title" type="text" placeholder="Add a Title" style="margin-left: 100px;">
+                    </div>
+                    <div class="task-description" >
+                        <label for="description" class="bold">Description :</label>
+                        <textarea name="description" id="description" cols="25" rows="3" style="margin-left: 45px;"></textarea>
+                    </div>
+                    <div class="category">
+                        <label class="bold">Category :</label>
+                        <input type="radio" id="notes" name="category" value="notes" style="margin-left: 50px;" checked>
+                        <label for="notes">Notes</label>
+                        <input type="radio" id="remainders" name="category" value="remainders">
+                        <label for="notes">Remainders</label>
+                    </div>
+                    <div class="meeting group1">
+                        <label class="bold">Meeting :</label>
+                        <input type="radio" id="personal" name="meeting" value="personal" style="margin-left: 60px;" checked>
+                        <label for="notes">Personal Meeting</label>
+                        <input type="radio" id="group" name="meeting" value="group">
+                        <label for="notes">Group Meeting</label>
+                    </div>
+                    <div class="person-select group1">
+                        <label class="bold">Select the person : </label>
+                        <select name="persons" id="persons" multiple style="margin-left: 10px;">
+                            <option value="" disabled selected>Select Persons</option>
+                            <option value="John">John</option>
+                            <option value="Alice">Alice</option>
+                            <option value="Bob">Bob</option>
+                            <option value="Jack">Jack</option>
+                        </select>
+                    </div>
+                    <div class="date-pick group1">
+                        <label class="bold">Schedule :</label>
+                        <input id="date" type="date" name="date" placeholder="dd-mm-yyyy" style="margin-left: 30px;">
+                    </div>
+                    <div class="time-pick group1">
+                        <label class="bold">Start Time :</label>
+                        <select name="time" id="times" style="margin-left: 20px;">
+                            <option value="" disabled selected>Select Time</option>
+                            <option value="1">1:00</option>
+                            <option value="2">2:00</option>
+                            <option value="3">3:00</option>
+                            <option value="4">4:00</option>
+                            <option value="5">5:00</option>
+                            <option value="6">6:00</option>
+                            <option value="7">7:00</option>
+                            <option value="8">8:00</option>
+                            <option value="9">9:00</option>
+                            <option value="10">10:00</option>
+                            <option value="11">11:00</option>
+                            <option value="12">12:00</option>
+                        </select>
+                        <select name="am-pm" id="am-pm">
+                            <option value="" disabled selected>AM/Pm</option>
+                            <option value="AM" >AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </div>
+                    <div class="btn-group">
+                        <div class="btn">
+                            <input type="submit" value="submit">
+                        </div>
+                        <div class="clear-form">
+                            <button>Clear Form</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </form>
+            
+        </div>
+        <div class="right">
+            <ul class="display-box">
+            </ul>
+            <div class="clear-btn">
+                <button>Clear Entries</button>
+            </div>
+        </div>
+    </div>
+    <div class="avail-list"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
